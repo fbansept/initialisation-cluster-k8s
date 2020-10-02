@@ -18,6 +18,7 @@ Vagrant.configure("2") do |config|
     config.vm.provider "virtualbox" do |v|
         v.memory = MEM
         v.cpus = CPU
+        v.customize ["modifyvm", :id, "--cableconnected1", "on"]
     end
 
     # Master node config
